@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>РОзовый чизкейк</title>
+<title>Розовый чизкейк</title>
 <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -11,7 +11,7 @@
 <body>
 
 <header class="header">
-  <div class="container">
+  <div class="container1">
     <div class="left">
       <div class="burger">
         <span></span>
@@ -55,9 +55,60 @@
   </div>
 </section>
 
-<section class="About">
+<div class="container">
 
-</section>
+<div class="products" id="products"></div>
+
+<div class="cart">
+<h2>Корзина</h2>
+<div id="cartItems"></div>
+
+<button class="checkoutBtn" onclick="openModal()">Отправить</button>
+<div class="modal" id="orderModal">
+<div class="modal-content">
+
+<div class="modal-header">
+<h2>ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+
+<div class="modal-actions">
+<button class="contacts">Контакты</button>
+<span class="close" onclick="closeModal()">✖</span>
+</div>
+</div>
+
+<div class="modal-body">
+
+  <div class="form-column">
+  <label>ФИО</label>
+  <input id="name">
+
+  <label>Телефон</label>
+  <input id="phone">
+
+  <label>Адрес</label>
+  <input id="address">
+
+  <label>Почта</label>
+  <input id="email">
+  </div>
+
+  <div class="note-column">
+  <textarea id="note" placeholder="Примечание..."></textarea>
+  </div>
+<div class="total" id="modalTotal"></div>
+</div>
+  <div style="margin:10px 0;">
+          <input type="checkbox" id="privacyCheck" onclick="updateCheckoutBtn()">
+          <label for="privacyCheck">Я согласен с <a href='#' target='_blank'>политикой конфиденциальности</a></label>
+  </div>
+<div class="modal-footer">
+<button onclick="checkout()">Отправить</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
 
 <script src="script.js"></script>
 </body>
